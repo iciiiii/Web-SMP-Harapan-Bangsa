@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Sekolah SMP Harapan Bangsa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%; /* Memastikan body mengisi seluruh tinggi viewport */
+            margin: 0; /* Menghapus margin default */
+        }
+
+        body {
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Menyusun elemen secara kolom */
+        }
+
+        header {
+            background-color: #00d9ff; /* Warna latar belakang header */
+            color: white; /* Warna teks di header */
+            padding: 20px; /* Ruang dalam header */
+            text-align: center; /* Memusatkan teks */
+        }
+
+        nav ul {
+            list-style-type: none; /* Menghapus bullet points */
+            padding: 0; /* Menghapus padding pada daftar */
+        }
+
+        nav ul li {
+            display: inline; /* Menampilkan daftar secara horizontal */
+            margin-right: 15px; /* Ruang antar item daftar */
+        }
+
+        nav ul li a {
+            color: white; /* Warna teks tautan */
+            text-decoration: none; /* Menghapus garis bawah pada tautan */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline; /* Garis bawah saat hover */
+        }
+
+        .hero {
+            background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang untuk bagian hero */
+            padding: 50px; /* Ruang dalam bagian hero */
+            text-align: center; /* Memusatkan teks */
+            flex: 1; /* Memungkinkan hero mengisi ruang tersisa */
+            color: white; /* Warna teks di bagian hero */
+        }
+
+        .cta-button {
+            background-color: #FF5733; /* Warna tombol */
+            color: white; /* Warna teks tombol */
+            padding: 10px 20px; /* Ruang dalam tombol */
+            text-decoration: none; /* Menghapus garis bawah */
+            border-radius: 5px; /* Membuat sudut tombol membulat */
+            font-weight: bold; /* Membuat teks tombol tebal */
+            margin-top: 20px; /* Memberi ruang di atas tombol */
+            display: inline-block; /* Memungkinkan margin dan padding pada tombol */
+        }
+
+        .cta-button:hover {
+            background-color: #C70039; /* Warna tombol saat hover */
+        }
+
+        footer {
+            text-align: center; /* Memusatkan teks di footer */
+            padding: 10px; /* Ruang dalam footer */
+            background-color: #00eaff; /* Warna latar belakang footer */
+            color: white; /* Warna teks di footer */
+        }
+
+        #scrollToTopBtn {
+            display: none; /* Menyembunyikan tombol secara default */
+            position: fixed; /* Posisi tetap di kanan bawah */
+            bottom: 20px; /* Jarak dari bawah */
+            right: 30px; /* Jarak dari kanan */
+            background-color: #00d0ff; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghapus border */
+            padding: 10px; /* Ruang dalam tombol */
+            border-radius: 5px; /* Membuat sudut tombol membulat */
+            cursor: pointer; /* Mengubah cursor menjadi pointer */
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #00d5ff; /* Warna tombol saat hover */
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5em; /* Mengurangi ukuran font di header untuk perangkat kecil */
+            }
+
+            .cta-button {
+                padding: 8px 16px; /* Mengurangi padding pada tombol untuk perangkat kecil */
+                font-size: 1em; /* Ukuran font tombol lebih kecil */
+            }
+
+            footer {
+                font-size: 0.9em; /* Mengurangi ukuran font footer untuk perangkat kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logosekolah.png" alt="Logo Sekolah" style="width: 150px; height: auto;"> <!-- Menambahkan logo sekolah -->
+        <h1>Selamat Datang di Sekolah SMP</h1>
+        <p>Tempat terbaik untuk belajar dan berkembang</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Visi Kami</h2>
+        <p>Membangun generasi cerdas, berkarakter, dan berakhlak mulia.</p>
+        <h2>Misi Kami</h2>
+        <p>1. Menyediakan pendidikan yang berkualitas untuk semua siswa.<br>
+           2. Mengembangkan potensi siswa melalui berbagai kegiatan ekstrakurikuler.<br>
+           3. Menciptakan lingkungan belajar yang aman dan mendukung.<br>
+           4. Mendorong nilai-nilai kebersamaan dan kejujuran dalam setiap aspek kehidupan.</p>
+        <a href="profil.html" class="cta-button">Lihat Profil Sekolah</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 Sekolah SMP Harapan Bangsa</p>
+    </footer>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Kembali ke Atas">⬆️</button>
+
+    <script>
+        // Menampilkan tombol "Kembali ke Atas" saat scroll ke bawah
+        window.onscroll = function() {
+            const scrollBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block"; // Menampilkan tombol
+            } else {
+                scrollBtn.style.display = "none"; // Menyembunyikan tombol
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll ke atas dengan halus
+        }
+    </script>
+</body>
+</html>

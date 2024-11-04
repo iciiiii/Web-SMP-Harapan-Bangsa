@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Sekolah SMP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Menyusun elemen secara kolom */
+            min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
+            margin: 0; /* Menghapus margin default */
+            background-image: url('profil.jpg'); /* Menambahkan gambar latar belakang */
+            background-size: cover; /* Menyesuaikan ukuran gambar untuk menutupi seluruh area */
+            background-position: center; /* Memusatkan gambar latar belakang */
+            color: black; /* Warna teks default */
+        }
+
+        header {
+            background-color: rgba(0, 217, 255, 0.8); /* Warna latar belakang header dengan transparansi */
+            color: white; /* Warna teks di header */
+            padding: 20px; /* Ruang dalam header */
+            text-align: center; /* Memusatkan teks */
+        }
+
+        nav ul {
+            list-style-type: none; /* Menghapus bullet points */
+            padding: 0; /* Menghapus padding pada daftar */
+        }
+
+        nav ul li {
+            display: inline; /* Menampilkan daftar secara horizontal */
+            margin-right: 15px; /* Ruang antar item daftar */
+        }
+
+        nav ul li a {
+            color: white; /* Warna teks tautan */
+            text-decoration: none; /* Menghapus garis bawah pada tautan */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline; /* Garis bawah saat hover */
+        }
+
+        section {
+            flex: 1; /* Memungkinkan section mengisi ruang tersisa */
+            padding: 20px; /* Ruang dalam section */
+            background-color: rgba(249, 249, 249, 0.8); /* Warna latar belakang section dengan transparansi */
+            border-radius: 8px; /* Sudut membulat untuk section */
+        }
+
+        footer {
+            text-align: center; /* Memusatkan teks di footer */
+            padding: 10px; /* Ruang dalam footer */
+            background-color: rgba(0, 234, 255, 0.8); /* Warna latar belakang footer dengan transparansi */
+            color: white; /* Warna teks di footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Profil Sekolah</h2>
+        <p>Sekolah SMP [Nama Sekolah] didirikan pada tahun 2000 dengan tujuan mencetak generasi unggul.</p>
+        <h3>Visi dan Misi</h3>
+        <ul>
+            <li>Visi: Membangun generasi cerdas dan berkarakter.</li>
+            <li>Misi: Menyediakan pendidikan berkualitas untuk semua siswa.</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Sekolah SMP - [Nama Sekolah]</p>
+    </footer>
+</body>
+</html>

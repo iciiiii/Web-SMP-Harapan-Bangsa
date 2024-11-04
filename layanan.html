@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Sekolah SMP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex; /* Menggunakan flexbox */
+            flex-direction: column; /* Menyusun elemen secara kolom */
+            min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
+            margin: 0; /* Menghapus margin default */
+            background-image: url('background.jpg'); /* Gambar latar belakang */
+            background-size: cover; /* Menutupi seluruh area */
+            background-position: center; /* Memusatkan gambar latar belakang */
+            color: black; /* Warna teks default */
+        }
+
+        header {
+            background-color: rgba(0, 217, 255, 0.8); /* Warna latar belakang header dengan transparansi */
+            color: white; /* Warna teks di header */
+            padding: 20px; /* Ruang dalam header */
+            text-align: center; /* Memusatkan teks */
+        }
+
+        nav ul {
+            list-style-type: none; /* Menghapus bullet points */
+            padding: 0; /* Menghapus padding pada daftar */
+        }
+
+        nav ul li {
+            display: inline; /* Menampilkan daftar secara horizontal */
+            margin-right: 15px; /* Ruang antar item daftar */
+        }
+
+        nav ul li a {
+            color: white; /* Warna teks tautan */
+            text-decoration: none; /* Menghapus garis bawah pada tautan */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline; /* Garis bawah saat hover */
+        }
+
+        section {
+            flex: 1; /* Memungkinkan section mengisi ruang tersisa */
+            padding: 20px; /* Ruang dalam section */
+            background-color: rgba(249, 249, 249, 0.8); /* Warna latar belakang section dengan transparansi */
+            border-radius: 8px; /* Sudut membulat untuk section */
+            margin: 20px; /* Ruang luar pada section */
+        }
+
+        footer {
+            text-align: center; /* Memusatkan teks di footer */
+            padding: 10px; /* Ruang dalam footer */
+            background-color: rgba(0, 234, 255, 0.8); /* Warna latar belakang footer dengan transparansi */
+            color: white; /* Warna teks di footer */
+        }
+
+        #scrollToTopBtn {
+            display: none; /* Menyembunyikan tombol secara default */
+            position: fixed; /* Posisi tetap di kanan bawah */
+            bottom: 20px; /* Jarak dari bawah */
+            right: 30px; /* Jarak dari kanan */
+            background-color: #00d0ff; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghapus border */
+            padding: 10px; /* Ruang dalam tombol */
+            border-radius: 5px; /* Membuat sudut tombol membulat */
+            cursor: pointer; /* Mengubah cursor menjadi pointer */
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #00d5ff; /* Warna tombol saat hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Layanan Sekolah</h2>
+        <p>Kami menyediakan berbagai layanan untuk mendukung siswa, seperti 
+            <a href="perpustakaan.html">Perpustakaan</a>, 
+            <a href="konseling.html">Konseling</a>, dan 
+            <a href="ekstrakurikuler.html">Kegiatan Ekstrakurikuler</a>.
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Sekolah SMP - [Nama Sekolah]</p>
+    </footer>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Kembali ke Atas">⬆️</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Menampilkan tombol "Kembali ke Atas" saat scroll ke bawah
+        window.onscroll = function() {
+            const scrollBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block"; // Menampilkan tombol
+            } else {
+                scrollBtn.style.display = "none"; // Menyembunyikan tombol
+            }
+        };
+    </script>
+</body>
+</html>
